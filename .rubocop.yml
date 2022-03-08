@@ -1,0 +1,23 @@
+require:
+  - rubocop-rails
+  - rubocop-performance
+
+Rails:
+  Enabled: true
+
+Documentation: 
+  Enabled: false
+
+AllCops:
+  NewCops: enable 
+  TargetRubyVersion: 3.0
+  # Do not exclude files from ALL COPS unless it's really necessary!
+  Exclude:
+    - bin/**/*
+    - tmp/**/*
+    - db/schema.rb
+    - db/migrate/*.rb
+    - config/environments/*.rb
+    - config/routes.rb
+    - node_modules/**/*
+    - vendor/bundle/**/*
