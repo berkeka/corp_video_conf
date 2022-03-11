@@ -6,6 +6,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :validatable,
          :jwt_authenticatable, jwt_revocation_strategy: self
 
+  has_and_belongs_to_many :conversations, dependent: :destroy
+
   enum role: { admin: 0, employee: 1, customer: 2 }
 
   after_initialize do
