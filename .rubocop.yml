@@ -8,6 +8,14 @@ Rails:
 Documentation: 
   Enabled: false
 
+Metrics/MethodLength:
+  Exclude:
+    - app/controllers/users/*.rb
+
+Layout/LineLength:
+  Exclude:
+    - config/initializers/devise.rb
+
 AllCops:
   NewCops: enable 
   TargetRubyVersion: 3.0
