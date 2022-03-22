@@ -7,6 +7,7 @@ class User < ApplicationRecord
          :jwt_authenticatable, jwt_revocation_strategy: self
 
   has_and_belongs_to_many :conversations, dependent: :destroy
+  has_and_belongs_to_many :meetings
 
   enum role: { admin: 0, employee: 1, customer: 2 }
 
